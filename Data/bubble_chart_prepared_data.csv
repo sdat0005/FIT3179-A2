@@ -1,59 +1,223 @@
-County,Year,Cost of Living Index,Rent Index,Unemployment Rate
-Honolulu County,2015,104.2,64.9,3.391666666666667
-New York County,2015,100.0,100.0,4.808333333333334
-San Francisco County,2015,97.0,96.1,3.633333333333333
-Fairfield County,2015,96.2,62.7,5.85
-King County,2015,90.7,59.1,3.7708333333333335
-Cuyahoga County,2015,90.3,27.3,5.0
-Harris County,2015,89.9,50.7,4.625
-Knox County,2015,89.6,31.0,4.837962962962963
-Hartford County,2015,89.5,37.8,5.866666666666667
-Suffolk County,2015,89.4,70.5,4.716666666666667
-Fairfax County,2015,89.2,55.6,3.5666666666666664
-Philadelphia County,2015,88.6,52.9,6.866666666666667
-Sacramento County,2015,88.2,34.7,6.0
-Dane County,2015,86.1,34.2,3.1916666666666664
-Santa Clara County,2015,85.9,77.6,4.15
-Buncombe County,2015,84.7,36.7,4.358333333333333
-Alameda County,2015,84.6,66.4,4.741666666666666
-Richmond City,2015,83.5,35.4,5.2
-Wake County,2015,83.0,35.2,4.641666666666667
-Madison County,2015,81.3,20.9,4.5931372549019605
-Hennepin County,2015,80.6,38.7,3.283333333333333
-Baltimore City,2015,80.0,42.4,7.708333333333333
-Erie County,2015,80.0,25.1,5.480555555555556
-Cook County,2015,79.6,54.7,5.266666666666667
-Clark County,2015,79.5,27.9,5.1
-Duval County,2015,79.1,29.3,8.241666666666667
-Orange County,2015,78.6,33.7,4.907142857142857
-Denver County,2015,78.6,43.6,3.7083333333333335
-Travis County,2015,78.3,46.6,3.266666666666667
-Washoe County,2015,78.0,24.9,6.258333333333333
-Kent County,2015,77.8,30.8,4.704
-Fresno County,2015,77.4,30.8,10.183333333333334
-San Diego County,2015,77.3,57.1,5.2
-Dallas County,2015,77.1,39.6,6.066666666666666
-Franklin County,2015,76.8,31.4,5.095454545454546
-Montgomery County,2015,76.4,23.3,5.546568627450981
-Jackson County,2015,76.1,27.8,5.694628099173554
-Allegheny County,2015,75.9,35.9,4.808333333333334
-Fulton County,2015,75.7,34.6,6.142857142857143
-Hillsborough County,2015,75.7,32.0,3.608333333333334
-Pima County,2015,75.6,28.4,5.541666666666667
-El Paso County,2015,75.2,28.3,4.920833333333333
-Washtenaw County,2015,75.1,35.4,4.05
-Wayne County,2015,75.0,30.6,6.113529411764706
-Bexar County,2015,73.7,33.5,3.825
-Orleans Parish,2015,73.6,43.8,6.5125
-Jefferson County,2015,73.4,27.6,5.781521739130435
-Maricopa County,2015,72.3,30.3,5.166666666666667
-Marion County,2015,71.8,28.3,5.991666666666666
-Shelby County,2015,71.7,31.7,4.730555555555555
-Milwaukee County,2015,71.6,29.9,5.8500000000000005
-Multnomah County,2015,71.1,43.7,4.983333333333333
-Bernalillo County,2015,71.1,26.0,5.925
-Oklahoma County,2015,69.7,22.6,3.783333333333333
-Salt Lake County,2015,69.7,31.1,3.333333333333333
-Los Angeles County,2015,69.4,57.7,6.65
-Ada County,2015,68.9,24.5,3.591666666666667
-Douglas County,2015,63.4,23.8,4.871969696969697
+County_Year_Key,County,Year,Cost of Living Index,Rent Index,Unemployment Rate
+Hillsborough County_2010,Hillsborough County,2010,109.6,40.0,5.633333333333333
+Franklin County_2010,Franklin County,2010,104.7,42.6,8.103030303030302
+Multnomah County_2010,Multnomah County,2010,102.9,46.6,9.0
+Fulton County_2010,Fulton County,2010,101.0,40.7,9.952380952380953
+King County_2010,King County,2010,100.3,49.8,6.533333333333334
+New York County_2010,New York County,2010,100.0,100.0,8.133333333333333
+Hennepin County_2010,Hennepin County,2010,92.8,56.5,6.666666666666667
+Travis County_2010,Travis County,2010,91.4,57.5,6.566666666666666
+San Francisco County_2010,San Francisco County,2010,90.6,81.5,8.799999999999999
+Suffolk County_2010,Suffolk County,2010,89.1,63.2,7.45
+Philadelphia County_2010,Philadelphia County,2010,85.5,59.4,10.266666666666667
+Lancaster County_2010,Lancaster County,2010,79.2,29.5,8.191666666666666
+New York County_2011,New York County,2011,100.0,100.0,7.816666666666666
+King County_2011,King County,2011,93.7,45.8,5.920833333333333
+Maricopa County_2011,Maricopa County,2011,91.6,36.3,8.558333333333334
+Suffolk County_2011,Suffolk County,2011,89.8,60.8,7.15
+Los Angeles County_2011,Los Angeles County,2011,89.2,63.1,12.172727272727274
+Hillsborough County_2011,Hillsborough County,2011,89.1,35.0,5.65
+San Francisco County_2011,San Francisco County,2011,88.1,95.8,8.009090909090908
+San Diego County_2011,San Diego County,2011,86.6,65.1,10.290909090909093
+Ada County_2011,Ada County,2011,86.3,28.7,7.341666666666666
+Dallas County_2011,Dallas County,2011,85.9,38.3,10.196666666666664
+Hennepin County_2011,Hennepin County,2011,83.5,45.0,6.041666666666667
+Fulton County_2011,Fulton County,2011,82.5,37.8,10.029761904761903
+Santa Clara County_2011,Santa Clara County,2011,81.9,65.1,9.254545454545454
+Orleans Parish_2011,Orleans Parish,2011,79.6,47.3,8.625
+Jefferson County_2011,Jefferson County,2011,79.3,21.3,9.152173913043478
+Shelby County_2011,Shelby County,2011,79.1,36.9,7.99537037037037
+Philadelphia County_2011,Philadelphia County,2011,78.6,61.1,10.683333333333332
+Milwaukee County_2011,Milwaukee County,2011,78.2,36.1,9.275
+Hartford County_2011,Hartford County,2011,77.0,57.1,9.141666666666667
+Bexar County_2011,Bexar County,2011,74.4,30.4,7.166666666666667
+Jackson County_2011,Jackson County,2011,74.4,42.9,9.044841269841273
+Cuyahoga County_2011,Cuyahoga County,2011,74.1,41.1,7.583333333333333
+Travis County_2011,Travis County,2011,73.4,46.6,6.383333333333334
+Wayne County_2011,Wayne County,2011,72.4,32.9,9.287222222222224
+Fresno County_2011,Fresno County,2011,71.6,30.9,16.38181818181818
+Bernalillo County_2011,Bernalillo County,2011,70.4,35.5,7.216666666666666
+Suffolk County_2012,Suffolk County,2012,106.8,69.7,6.979166666666667
+Honolulu County_2012,Honolulu County,2012,103.5,59.0,5.391666666666667
+San Francisco County_2012,San Francisco County,2012,102.5,90.0,6.7
+King County_2012,King County,2012,101.0,48.2,5.652631578947369
+New York County_2012,New York County,2012,100.0,100.0,8.033333333333333
+Maricopa County_2012,Maricopa County,2012,98.6,32.8,7.291666666666667
+Santa Clara County_2012,Santa Clara County,2012,94.1,73.4,7.766666666666666
+Franklin County_2012,Franklin County,2012,94.0,20.4,7.426254826254826
+Hartford County_2012,Hartford County,2012,92.9,47.6,8.674999999999999
+Marion County_2012,Marion County,2012,92.5,32.0,8.641714285714285
+San Diego County_2012,San Diego County,2012,91.0,57.9,9.033333333333331
+Los Angeles County_2012,Los Angeles County,2012,90.9,64.0,10.733333333333334
+Hennepin County_2012,Hennepin County,2012,90.3,34.8,5.216666666666666
+Hillsborough County_2012,Hillsborough County,2012,90.0,32.4,5.758333333333333
+Baltimore City_2012,Baltimore City,2012,89.0,54.1,10.15
+Philadelphia County_2012,Philadelphia County,2012,88.4,58.8,10.891666666666666
+Dallas County_2012,Dallas County,2012,87.6,38.5,9.098181818181818
+Harris County_2012,Harris County,2012,87.0,39.7,6.757142857142857
+Cook County_2012,Cook County,2012,85.4,50.0,7.991666666666666
+Allegheny County_2012,Allegheny County,2012,83.7,22.6,6.95
+Hamilton County_2012,Hamilton County,2012,82.2,29.1,6.37378640776699
+Wayne County_2012,Wayne County,2012,79.7,30.5,8.690555555555555
+Denver County_2012,Denver County,2012,79.4,48.4,7.858333333333333
+Travis County_2012,Travis County,2012,78.9,45.6,5.614285714285714
+Multnomah County_2012,Multnomah County,2012,77.2,33.8,7.608333333333333
+Polk County_2012,Polk County,2012,75.4,29.2,7.251304347826086
+Clark County_2012,Clark County,2012,74.0,36.0,7.931249999999999
+Suffolk County_2013,Suffolk County,2013,100.1,73.0,6.4
+New York County_2013,New York County,2013,100.0,100.0,7.483333333333333
+Honolulu County_2013,Honolulu County,2013,99.6,64.3,4.408333333333333
+San Francisco County_2013,San Francisco County,2013,96.5,85.7,5.466666666666666
+Richmond City_2013,Richmond City,2013,95.1,33.7,6.775
+Philadelphia County_2013,Philadelphia County,2013,94.4,49.4,10.308333333333334
+King County_2013,King County,2013,91.8,53.0,4.720833333333333
+Hennepin County_2013,Hennepin County,2013,91.6,40.0,4.566666666666667
+Summit County_2013,Summit County,2013,89.0,29.1,5.625
+Cuyahoga County_2013,Cuyahoga County,2013,88.9,28.7,7.0
+Erie County_2013,Erie County,2013,88.3,32.4,7.686111111111111
+Clark County_2013,Clark County,2013,88.0,27.4,7.249305555555556
+Santa Clara County_2013,Santa Clara County,2013,87.4,79.1,6.466666666666666
+Dane County_2013,Dane County,2013,86.7,32.8,4.658333333333333
+Spokane County_2013,Spokane County,2013,86.1,26.9,8.191666666666666
+Travis County_2013,Travis County,2013,85.5,46.5,5.016666666666667
+Baltimore City_2013,Baltimore City,2013,84.4,41.1,9.708333333333334
+Sacramento County_2013,Sacramento County,2013,84.3,36.5,8.85
+Douglas County_2013,Douglas County,2013,83.8,34.8,6.672727272727272
+San Diego County_2013,San Diego County,2013,83.8,59.3,7.833333333333333
+Orleans Parish_2013,Orleans Parish,2013,83.7,41.8,7.383333333333333
+Wayne County_2013,Wayne County,2013,83.4,27.2,8.311666666666666
+Los Angeles County_2013,Los Angeles County,2013,83.1,64.8,9.683333333333334
+Hamilton County_2013,Hamilton County,2013,82.9,24.9,6.046296296296297
+Orange County_2013,Orange County,2013,82.2,38.9,7.028205128205129
+Salt Lake County_2013,Salt Lake County,2013,82.0,31.3,4.408333333333333
+Allegheny County_2013,Allegheny County,2013,81.8,30.2,6.541666666666667
+Franklin County_2013,Franklin County,2013,81.6,30.7,7.005681818181818
+Cook County_2013,Cook County,2013,81.4,56.5,7.774999999999999
+Hillsborough County_2013,Hillsborough County,2013,81.3,34.8,5.341666666666666
+Denver County_2013,Denver County,2013,81.2,46.1,6.625
+Essex County_2013,Essex County,2013,80.5,43.0,7.753333333333333
+Maricopa County_2013,Maricopa County,2013,80.1,30.2,6.583333333333333
+Mecklenburg County_2013,Mecklenburg County,2013,79.7,36.5,8.387500000000001
+Buncombe County_2013,Buncombe County,2013,79.6,37.0,5.925
+Harris County_2013,Harris County,2013,79.6,48.9,6.016666666666667
+Jackson County_2013,Jackson County,2013,79.5,24.6,7.582936507936508
+Marion County_2013,Marion County,2013,78.9,30.7,7.999444444444445
+Dallas County_2013,Dallas County,2013,78.6,42.0,8.403333333333332
+Wake County_2013,Wake County,2013,78.6,36.5,5.991666666666667
+Bexar County_2013,Bexar County,2013,78.6,35.1,5.766666666666667
+Multnomah County_2013,Multnomah County,2013,78.2,37.5,6.791666666666667
+Fulton County_2013,Fulton County,2013,77.8,40.3,9.092857142857142
+Bernalillo County_2013,Bernalillo County,2013,76.6,27.2,6.5
+Monroe County_2013,Monroe County,2013,75.7,33.6,8.212777777777777
+Polk County_2013,Polk County,2013,75.0,27.6,6.663333333333333
+Milwaukee County_2013,Milwaukee County,2013,74.8,29.3,8.416666666666666
+Honolulu County_2014,Honolulu County,2014,106.3,69.6,4.066666666666666
+New York County_2014,New York County,2014,100.0,100.0,6.075
+San Francisco County_2014,San Francisco County,2014,93.7,95.0,4.366666666666666
+Roanoke City_2014,Roanoke City,2014,93.2,25.4,5.866666666666667
+Suffolk County_2014,Suffolk County,2014,92.9,70.1,5.341666666666666
+Richmond City_2014,Richmond City,2014,92.0,35.2,6.133333333333333
+King County_2014,King County,2014,91.6,55.1,4.4
+Sacramento County_2014,Sacramento County,2014,91.1,35.8,7.308333333333334
+Hartford County_2014,Hartford County,2014,90.7,39.9,6.858333333333333
+Philadelphia County_2014,Philadelphia County,2014,90.1,49.7,8.125
+Hennepin County_2014,Hennepin County,2014,89.2,40.7,3.783333333333333
+Santa Barbara County_2014,Santa Barbara County,2014,85.7,56.1,6.1000000000000005
+Travis County_2014,Travis County,2014,84.9,44.7,4.066666666666666
+Harris County_2014,Harris County,2014,86.5,51.0,4.9750000000000005
+Denver County_2014,Denver County,2014,82.1,44.1,4.8
+Erie County_2014,Erie County,2014,81.4,28.8,6.236111111111111
+Washoe County_2014,Washoe County,2014,81.2,28.4,7.566666666666666
+Cook County_2014,Cook County,2014,81.0,55.3,6.608333333333333
+Wake County_2014,Wake County,2014,80.6,36.6,4.875
+Wayne County_2014,Wayne County,2014,80.3,27.7,7.003370786516854
+Greene County_2014,Greene County,2014,79.9,17.7,6.740384615384615
+Orleans Parish_2014,Orleans Parish,2014,79.4,41.6,6.909090909090909
+Alameda County_2014,Alameda County,2014,79.2,63.9,5.825
+Franklin County_2014,Franklin County,2014,78.6,30.6,5.893939393939394
+Spokane County_2014,Spokane County,2014,78.5,23.2,6.908333333333334
+Knox County_2014,Knox County,2014,78.2,31.5,5.542592592592593
+Orange County_2014,Orange County,2014,78.1,60.9,5.7595238095238095
+Baltimore City_2014,Baltimore City,2014,78.0,41.6,8.558333333333334
+Dallas County_2014,Dallas County,2014,77.6,42.9,7.39
+San Diego County_2014,San Diego County,2014,77.5,52.6,6.433333333333334
+Orange County_2014,Orange County,2014,77.2,36.8,5.7595238095238095
+Clark County_2014,Clark County,2014,76.7,26.4,5.865972222222222
+Hillsborough County_2014,Hillsborough County,2014,76.2,33.5,4.5
+Allegheny County_2014,Allegheny County,2014,75.1,34.5,5.383333333333333
+Monroe County_2014,Monroe County,2014,73.6,30.0,7.039887640449438
+Multnomah County_2014,Multnomah County,2014,73.5,38.4,5.925
+Marion County_2014,Marion County,2014,73.2,27.6,6.706111111111111
+Sedgwick County_2014,Sedgwick County,2014,73.1,20.4,5.004166666666666
+Jackson County_2014,Jackson County,2014,72.5,26.3,6.5328
+Salt Lake County_2014,Salt Lake County,2014,72.0,29.9,3.6916666666666655
+Maricopa County_2014,Maricopa County,2014,71.6,29.7,5.833333333333333
+Oklahoma County_2014,Oklahoma County,2014,71.6,26.4,4.2
+Davidson County_2014,Davidson County,2014,71.4,36.7,5.629166666666666
+Bexar County_2014,Bexar County,2014,71.2,34.0,4.675
+Jefferson County_2014,Jefferson County,2014,71.2,36.4,6.576086956521739
+Los Angeles County_2014,Los Angeles County,2014,70.5,55.2,8.241666666666665
+Summit County_2014,Summit County,2014,70.4,22.7,4.236111111111111
+Polk County_2014,Polk County,2014,70.0,26.8,5.679166666666666
+Douglas County_2014,Douglas County,2014,69.5,29.1,5.621212121212121
+Tarrant County_2014,Tarrant County,2014,69.3,29.7,5.008333333333334
+Ada County_2014,Ada County,2014,68.3,25.0,4.166666666666667
+Milwaukee County_2014,Milwaukee County,2014,67.8,29.9,6.891666666666667
+Honolulu County_2015,Honolulu County,2015,104.2,64.9,3.391666666666667
+New York County_2015,New York County,2015,100.0,100.0,4.808333333333334
+San Francisco County_2015,San Francisco County,2015,97.0,96.1,3.633333333333333
+Fairfield County_2015,Fairfield County,2015,96.2,62.7,5.85
+King County_2015,King County,2015,90.7,59.1,3.7708333333333335
+Cuyahoga County_2015,Cuyahoga County,2015,90.3,27.3,5.0
+Harris County_2015,Harris County,2015,89.9,50.7,4.625
+Knox County_2015,Knox County,2015,89.6,31.0,4.837962962962963
+Hartford County_2015,Hartford County,2015,89.5,37.8,5.866666666666667
+Suffolk County_2015,Suffolk County,2015,89.4,70.5,4.716666666666667
+Fairfax County_2015,Fairfax County,2015,89.2,55.6,3.5666666666666664
+Philadelphia County_2015,Philadelphia County,2015,88.6,52.9,6.866666666666667
+Sacramento County_2015,Sacramento County,2015,88.2,34.7,6.0
+Dane County_2015,Dane County,2015,86.1,34.2,3.1916666666666664
+Santa Clara County_2015,Santa Clara County,2015,85.9,77.6,4.15
+Buncombe County_2015,Buncombe County,2015,84.7,36.7,4.358333333333333
+Alameda County_2015,Alameda County,2015,84.6,66.4,4.741666666666666
+Richmond City_2015,Richmond City,2015,83.5,35.4,5.2
+Wake County_2015,Wake County,2015,83.0,35.2,4.641666666666667
+Madison County_2015,Madison County,2015,81.3,20.9,4.5931372549019605
+Hennepin County_2015,Hennepin County,2015,80.6,38.7,3.283333333333333
+Baltimore City_2015,Baltimore City,2015,80.0,42.4,7.708333333333333
+Erie County_2015,Erie County,2015,80.0,25.1,5.480555555555556
+Cook County_2015,Cook County,2015,79.6,54.7,5.266666666666667
+Clark County_2015,Clark County,2015,79.5,27.9,5.1
+Duval County_2015,Duval County,2015,79.1,29.3,8.241666666666667
+Orange County_2015,Orange County,2015,78.6,33.7,4.907142857142857
+Denver County_2015,Denver County,2015,78.6,43.6,3.7083333333333335
+Travis County_2015,Travis County,2015,78.3,46.6,3.266666666666667
+Washoe County_2015,Washoe County,2015,78.0,24.9,6.258333333333333
+Kent County_2015,Kent County,2015,77.8,30.8,4.704
+Fresno County_2015,Fresno County,2015,77.4,30.8,10.183333333333334
+San Diego County_2015,San Diego County,2015,77.3,57.1,5.2
+Dallas County_2015,Dallas County,2015,77.1,39.6,6.066666666666666
+Franklin County_2015,Franklin County,2015,76.8,31.4,5.095454545454546
+Montgomery County_2015,Montgomery County,2015,76.4,23.3,5.546568627450981
+Jackson County_2015,Jackson County,2015,76.1,27.8,5.694628099173554
+Allegheny County_2015,Allegheny County,2015,75.9,35.9,4.808333333333334
+Fulton County_2015,Fulton County,2015,75.7,34.6,6.142857142857143
+Hillsborough County_2015,Hillsborough County,2015,75.7,32.0,3.608333333333334
+Pima County_2015,Pima County,2015,75.6,28.4,5.541666666666667
+El Paso County_2015,El Paso County,2015,75.2,28.3,4.920833333333333
+Washtenaw County_2015,Washtenaw County,2015,75.1,35.4,4.05
+Wayne County_2015,Wayne County,2015,75.0,30.6,6.113529411764706
+Bexar County_2015,Bexar County,2015,73.7,33.5,3.825
+Orleans Parish_2015,Orleans Parish,2015,73.6,43.8,6.5125
+Jefferson County_2015,Jefferson County,2015,73.4,27.6,5.781521739130435
+Maricopa County_2015,Maricopa County,2015,72.3,30.3,5.166666666666667
+Marion County_2015,Marion County,2015,71.8,28.3,5.991666666666666
+Shelby County_2015,Shelby County,2015,71.7,31.7,4.730555555555555
+Milwaukee County_2015,Milwaukee County,2015,71.6,29.9,5.8500000000000005
+Multnomah County_2015,Multnomah County,2015,71.1,43.7,4.983333333333333
+Bernalillo County_2015,Bernalillo County,2015,71.1,26.0,5.925
+Oklahoma County_2015,Oklahoma County,2015,69.7,22.6,3.783333333333333
+Salt Lake County_2015,Salt Lake County,2015,69.7,31.1,3.333333333333333
+Los Angeles County_2015,Los Angeles County,2015,69.4,57.7,6.65
+Ada County_2015,Ada County,2015,68.9,24.5,3.591666666666667
+Douglas County_2015,Douglas County,2015,63.4,23.8,4.871969696969697
