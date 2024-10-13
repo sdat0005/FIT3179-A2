@@ -1,0 +1,238 @@
+Year,City,State,Country,Cost of Living Index,Rent Index,Cost of Living Plus Rent Index,Groceries Index,Restaurant Price Index,Local Purchasing Power Index,County,County_Year_Key
+2010,Tampa, FL, United States,109.6,40.0,78.5,99.2,66.8,88.9,Hillsborough County,Hillsborough County_2010
+2010,Columbus, OH, United States,104.7,42.6,77.0,97.8,66.8,93.7,Franklin County,Franklin County_2010
+2010,Portland, OR, United States,102.9,46.6,77.7,94.4,72.7,122.7,Multnomah County,Multnomah County_2010
+2010,Atlanta, GA, United States,101.0,40.7,74.0,93.9,87.2,79.6,Fulton County,Fulton County_2010
+2010,Seattle, WA, United States,100.3,49.8,77.8,104.9,107.7,133.9,King County,King County_2010
+2010,New York, NY, United States,100.0,100.0,100.0,100.0,100.0,100.0,New York County,New York County_2010
+2010,Minneapolis, MN, United States,92.8,56.5,76.6,103.2,80.0,83.5,Hennepin County,Hennepin County_2010
+2010,Austin, TX, United States,91.4,57.5,76.2,91.6,80.9,114.2,Travis County,Travis County_2010
+2010,San Francisco, CA, United States,90.6,81.5,86.6,114.4,90.0,114.2,San Francisco County,San Francisco County_2010
+2010,Boston, MA, United States,89.1,63.2,77.5,77.2,78.0,120.0,Suffolk County,Suffolk County_2010
+2010,Philadelphia, PA, United States,85.5,59.4,73.8,107.8,66.1,122.9,Philadelphia County,Philadelphia County_2010
+2010,Lincoln, NE, United States,79.2,29.5,57.0,61.3,59.6,118.3,Lancaster County,Lancaster County_2010
+2011,New York, NY, United States,100.0,100.0,100.0,100.0,100.0,100.0,New York County,New York County_2011
+2011,Seattle, WA, United States,93.7,45.8,76.5,94.1,85.6,124.9,King County,King County_2011
+2011,Phoenix, AZ, United States,91.6,36.3,71.8,75.6,67.8,112.9,Maricopa County,Maricopa County_2011
+2011,Boston, MA, United States,89.8,60.8,79.4,88.7,79.3,128.9,Suffolk County,Suffolk County_2011
+2011,Los Angeles, CA, United States,89.2,63.1,79.8,80.8,68.2,130.4,Los Angeles County,Los Angeles County_2011
+2011,Tampa, FL, United States,89.1,35.0,69.7,61.2,62.2,104.8,Hillsborough County,Hillsborough County_2011
+2011,San Francisco, CA, United States,88.1,95.8,90.8,82.8,72.7,107.1,San Francisco County,San Francisco County_2011
+2011,Miami, FL, United States,87.9,62.0,78.6,68.6,79.0,85.6,Miami-Dade County,Miami-Dade County_2011
+2011,San Diego, CA, United States,86.6,65.1,78.9,78.5,95.5,102.8,San Diego County,San Diego County_2011
+2011,Boise, ID, United States,86.3,28.7,65.6,71.9,56.7,120.4,Ada County,Ada County_2011
+2011,Dallas, TX, United States,85.9,38.3,68.8,77.6,59.0,127.6,Dallas County,Dallas County_2011
+2011,Minneapolis, MN, United States,83.5,45.0,69.7,87.8,78.2,123.2,Hennepin County,Hennepin County_2011
+2011,Atlanta, GA, United States,82.5,37.8,66.5,68.3,66.2,103.0,Fulton County,Fulton County_2011
+2011,San Jose, CA, United States,81.9,65.1,75.9,84.0,59.3,125.6,Santa Clara County,Santa Clara County_2011
+2011,New Orleans, LA, United States,79.6,47.3,68.0,59.8,54.7,70.9,Orleans Parish,Orleans Parish_2011
+2011,Louisville, KY, United States,79.3,21.3,58.5,73.9,53.1,95.4,Jefferson County,Jefferson County_2011
+2011,Memphis, TN, United States,79.1,36.9,63.9,64.9,55.8,93.0,Shelby County,Shelby County_2011
+2011,Philadelphia, PA, United States,78.6,61.1,72.3,73.5,66.8,112.2,Philadelphia County,Philadelphia County_2011
+2011,Milwaukee, WI, United States,78.2,36.1,63.1,72.4,73.6,103.3,Milwaukee County,Milwaukee County_2011
+2011,Hartford, CT, United States,77.0,57.1,69.9,102.5,55.4,116.1,Hartford County,Hartford County_2011
+2011,San Antonio, TX, United States,74.4,30.4,58.6,67.3,76.5,117.7,Bexar County,Bexar County_2011
+2011,Kansas City, MO, United States,74.4,42.9,63.1,67.5,58.0,96.8,Jackson County,Jackson County_2011
+2011,Cleveland, OH, United States,74.1,41.1,62.2,65.8,64.6,119.4,Cuyahoga County,Cuyahoga County_2011
+2011,Austin, TX, United States,73.4,46.6,63.8,73.6,61.2,130.5,Travis County,Travis County_2011
+2011,Detroit, MI, United States,72.4,32.9,58.2,67.7,59.1,98.9,Wayne County,Wayne County_2011
+2011,Fresno, CA, United States,71.6,30.9,57.0,70.2,56.6,99.6,Fresno County,Fresno County_2011
+2011,Albuquerque, NM, United States,70.4,35.5,57.9,75.6,58.3,116.8,Bernalillo County,Bernalillo County_2011
+2012,Boston, MA, United States,106.8,69.7,93.4,113.2,86.1,109.9,Suffolk County,Suffolk County_2012
+2012,Honolulu, HI, United States,103.5,59.0,87.5,103.7,78.3,90.6,Honolulu County,Honolulu County_2012
+2012,San Francisco, CA, United States,102.5,90.0,98.0,97.8,83.2,89.3,San Francisco County,San Francisco County_2012
+2012,Seattle, WA, United States,101.0,48.2,82.0,100.9,82.9,107.2,King County,King County_2012
+2012,New York, NY, United States,100.0,100.0,100.0,100.0,100.0,100.0,New York County,New York County_2012
+2012,Phoenix, AZ, United States,98.6,32.8,74.9,85.1,72.8,97.5,Maricopa County,Maricopa County_2012
+2012,Washington, DC, United States,98.2,69.4,87.8,89.4,81.3,97.4,District of Columbia,District of Columbia_2012
+2012,San Jose, CA, United States,94.1,73.4,86.6,82.3,82.0,113.1,Santa Clara County,Santa Clara County_2012
+2012,Columbus, OH, United States,94.0,20.4,67.5,86.7,75.1,112.7,Franklin County,Franklin County_2012
+2012,Hartford, CT, United States,92.9,47.6,76.6,108.4,72.1,109.1,Hartford County,Hartford County_2012
+2012,Indianapolis, IN, United States,92.5,32.0,70.7,72.0,69.9,281.8,Marion County,Marion County_2012
+2012,San Diego, CA, United States,91.0,57.9,79.1,81.1,84.3,109.8,San Diego County,San Diego County_2012
+2012,Los Angeles, CA, United States,90.9,64.0,81.2,73.6,70.5,122.3,Los Angeles County,Los Angeles County_2012
+2012,Minneapolis, MN, United States,90.3,34.8,70.3,72.8,77.2,108.2,Hennepin County,Hennepin County_2012
+2012,Tampa, FL, United States,90.0,32.4,69.2,64.0,62.2,90.9,Hillsborough County,Hillsborough County_2012
+2012,Baltimore, MD, United States,89.0,54.1,76.4,101.9,78.1,118.8,Baltimore City,Baltimore City_2012
+2012,Philadelphia, PA, United States,88.4,58.8,77.7,83.4,78.5,99.0,Philadelphia County,Philadelphia County_2012
+2012,Dallas, TX, United States,87.6,38.5,69.9,67.9,72.9,113.9,Dallas County,Dallas County_2012
+2012,Houston, TX, United States,87.0,39.7,70.0,75.0,68.9,137.3,Harris County,Harris County_2012
+2012,Chicago, IL, United States,85.4,50.0,72.7,72.3,74.8,119.9,Cook County,Cook County_2012
+2012,Pittsburgh, PA, United States,83.7,22.6,61.7,69.8,56.6,135.2,Allegheny County,Allegheny County_2012
+2012,Cincinnati, OH, United States,82.2,29.1,63.1,72.1,62.0,103.6,Hamilton County,Hamilton County_2012
+2012,Detroit, MI, United States,79.7,30.5,62.0,75.8,67.2,92.6,Wayne County,Wayne County_2012
+2012,Denver, CO, United States,79.4,48.4,68.2,69.2,64.6,126.1,Denver County,Denver County_2012
+2012,Austin, TX, United States,78.9,45.6,66.9,80.4,65.0,131.9,Travis County,Travis County_2012
+2012,Portland, OR, United States,77.2,33.8,61.6,67.3,68.4,123.0,Multnomah County,Multnomah County_2012
+2012,Des Moines, IA, United States,75.4,29.2,58.8,68.6,54.5,104.0,Polk County,Polk County_2012
+2012,Las Vegas, NV, United States,74.0,36.0,60.3,66.8,70.8,138.3,Clark County,Clark County_2012
+2013,Washington, DC, United States,105.6,78.5,92.6,104.4,94.8,101.9,District of Columbia,District of Columbia_2013
+2013,Anchorage, AK, United States,102.9,51.3,78.1,109.5,83.2,115.8,Anchorage Municipality,Anchorage Municipality_2013
+2013,Boston, MA, United States,100.1,73.0,87.1,107.4,88.8,106.7,Suffolk County,Suffolk County_2013
+2013,New York, NY, United States,100.0,100.0,100.0,100.0,100.0,100.0,New York County,New York County_2013
+2013,Honolulu, HI, United States,99.6,64.3,82.7,118.9,76.6,105.4,Honolulu County,Honolulu County_2013
+2013,San Francisco, CA, United States,96.5,85.7,91.3,108.2,83.0,114.4,San Francisco County,San Francisco County_2013
+2013,Richmond, VA, United States,95.1,33.7,65.6,93.0,84.6,123.8,Richmond City,Richmond City_2013
+2013,Philadelphia, PA, United States,94.4,49.4,72.8,99.1,76.7,123.8,Philadelphia County,Philadelphia County_2013
+2013,Miami, FL, United States,93.4,56.1,75.5,101.0,83.0,104.0,Miami-Dade County,Miami-Dade County_2013
+2013,Seattle, WA, United States,91.8,53.0,73.2,96.2,78.1,141.2,King County,King County_2013
+2013,Minneapolis, MN, United States,91.6,40.0,66.8,84.9,72.7,125.8,Hennepin County,Hennepin County_2013
+2013,Akron, OH, United States,89.0,29.1,60.3,106.2,60.6,129.5,Summit County,Summit County_2013
+2013,Cleveland, OH, United States,88.9,28.7,60.0,91.3,64.6,132.5,Cuyahoga County,Cuyahoga County_2013
+2013,Buffalo, NY, United States,88.3,32.4,61.5,89.0,65.9,135.1,Erie County,Erie County_2013
+2013,Las Vegas, NV, United States,88.0,27.4,58.9,89.5,80.4,144.8,Clark County,Clark County_2013
+2013,San Jose, CA, United States,87.4,79.1,83.4,82.5,84.4,126.7,Santa Clara County,Santa Clara County_2013
+2013,Madison, WI, United States,86.7,32.8,60.9,94.7,72.4,140.9,Dane County,Dane County_2013
+2013,Spokane, WA, United States,86.1,26.9,57.7,92.8,75.2,141.3,Spokane County,Spokane County_2013
+2013,Austin, TX, United States,85.5,46.5,66.8,90.8,67.3,124.6,Travis County,Travis County_2013
+2013,Baltimore, MD, United States,84.4,41.1,63.6,87.5,72.5,141.8,Baltimore City,Baltimore City_2013
+2013,Sacramento, CA, United States,84.3,36.5,61.4,87.4,68.8,134.7,Sacramento County,Sacramento County_2013
+2013,Omaha, NE, United States,83.8,34.8,60.3,82.7,75.2,128.6,Douglas County,Douglas County_2013
+2013,San Diego, CA, United States,83.8,59.3,72.0,78.7,78.2,128.5,San Diego County,San Diego County_2013
+2013,New Orleans, LA, United States,83.7,41.8,63.6,85.9,60.8,119.4,Orleans Parish,Orleans Parish_2013
+2013,Detroit, MI, United States,83.4,27.2,56.4,80.5,69.9,132.9,Wayne County,Wayne County_2013
+2013,Los Angeles, CA, United States,83.1,64.8,74.3,77.9,77.1,113.0,Los Angeles County,Los Angeles County_2013
+2013,Cincinnati, OH, United States,82.9,24.9,55.1,70.8,57.5,147.6,Hamilton County,Hamilton County_2013
+2013,Orlando, FL, United States,82.2,38.9,61.4,84.7,66.7,127.9,Orange County,Orange County_2013
+2013,Salt Lake City, UT, United States,82.0,31.3,57.6,82.4,68.9,137.9,Salt Lake County,Salt Lake County_2013
+2013,Pittsburgh, PA, United States,81.8,30.2,57.0,72.4,68.9,146.7,Allegheny County,Allegheny County_2013
+2013,Columbus, OH, United States,81.6,30.7,57.2,89.6,69.1,130.2,Franklin County,Franklin County_2013
+2013,Chicago, IL, United States,81.4,56.5,69.4,71.2,72.0,120.2,Cook County,Cook County_2013
+2013,Tampa, FL, United States,81.3,34.8,59.0,76.6,65.1,136.3,Hillsborough County,Hillsborough County_2013
+2013,Denver, CO, United States,81.2,46.1,64.4,84.7,68.7,140.5,Denver County,Denver County_2013
+2013,Newark, NJ, United States,80.5,43.0,62.5,76.0,77.5,151.9,Essex County,Essex County_2013
+2013,Phoenix, AZ, United States,80.1,30.2,56.2,81.1,69.3,145.0,Maricopa County,Maricopa County_2013
+2013,Charlotte, NC, United States,79.7,36.5,59.0,80.8,60.8,138.9,Mecklenburg County,Mecklenburg County_2013
+2013,Asheville, NC, United States,79.6,37.0,59.1,94.0,58.6,126.9,Buncombe County,Buncombe County_2013
+2013,Houston, TX, United States,79.6,48.9,64.8,75.8,67.9,129.5,Harris County,Harris County_2013
+2013,Kansas City, MO, United States,79.5,24.6,53.2,76.5,71.1,153.8,Jackson County,Jackson County_2013
+2013,Indianapolis, IN, United States,78.9,30.7,55.8,77.1,70.5,145.3,Marion County,Marion County_2013
+2013,Dallas, TX, United States,78.6,42.0,61.0,73.9,69.6,137.1,Dallas County,Dallas County_2013
+2013,Raleigh, NC, United States,78.6,36.5,58.4,80.1,70.0,144.2,Wake County,Wake County_2013
+2013,San Antonio, TX, United States,78.6,35.1,57.7,76.4,74.5,134.6,Bexar County,Bexar County_2013
+2013,Portland, OR, United States,78.2,37.5,58.6,74.9,67.4,130.7,Multnomah County,Multnomah County_2013
+2013,Atlanta, GA, United States,77.8,40.3,59.8,74.9,64.7,145.5,Fulton County,Fulton County_2013
+2013,Albuquerque, NM, United States,76.6,27.2,52.9,82.3,57.6,150.9,Bernalillo County,Bernalillo County_2013
+2013,Rochester, NY, United States,75.7,33.6,55.5,87.9,66.4,109.4,Monroe County,Monroe County_2013
+2013,Des Moines, IA, United States,75.0,27.6,52.3,81.1,57.9,149.5,Polk County,Polk County_2013
+2013,Milwaukee, WI, United States,74.8,29.3,53.0,73.0,63.0,159.6,Milwaukee County,Milwaukee County_2013
+2014,Honolulu, HI, United States,106.3,69.6,88.5,136.8,79.0,80.7,Honolulu County,Honolulu County_2014
+2014,Washington, DC, United States,100.4,71.5,86.3,103.0,94.9,106.6,District of Columbia,District of Columbia_2014
+2014,New York, NY, United States,100.0,100.0,100.0,100.0,100.0,100.0,New York County,New York County_2014
+2014,Anchorage, AK, United States,99.0,44.6,72.5,106.4,85.1,165.8,Anchorage Municipality,Anchorage Municipality_2014
+2014,San Francisco, CA, United States,93.7,95.0,94.3,109.2,87.2,103.9,San Francisco County,San Francisco County_2014
+2014,Roanoke, VA, United States,93.2,25.4,60.2,110.3,72.0,126.9,Roanoke City,Roanoke City_2014
+2014,Boston, MA, United States,92.9,70.1,81.9,100.4,83.9,115.6,Suffolk County,Suffolk County_2014
+2014,Richmond, VA, United States,92.0,35.2,64.4,101.7,82.0,135.7,Richmond City,Richmond City_2014
+2014,Seattle, WA, United States,91.6,55.1,73.9,100.4,81.7,115.3,King County,King County_2014
+2014,Sacramento, CA, United States,91.1,35.8,64.2,101.3,71.0,128.2,Sacramento County,Sacramento County_2014
+2014,Hartford, CT, United States,90.7,39.9,66.0,108.0,78.3,127.5,Hartford County,Hartford County_2014
+2014,Philadelphia, PA, United States,90.1,49.7,70.5,104.5,76.2,122.6,Philadelphia County,Philadelphia County_2014
+2014,Minneapolis, MN, United States,89.2,40.7,65.6,97.7,73.9,114.6,Hennepin County,Hennepin County_2014
+2014,Saint Petersburg, FL, United States,88.7,37.8,64.0,100.5,64.7,84.6,Pinellas County,Pinellas County_2014
+2014,Santa Barbara, CA, United States,85.7,56.1,71.3,98.3,79.9,102.2,Santa Barbara County,Santa Barbara County_2014
+2014,Austin, TX, United States,84.9,44.7,65.4,95.0,69.6,116.5,Travis County,Travis County_2014
+2014,Miami, FL, United States,82.8,58.1,70.8,90.3,77.1,111.2,Miami-Dade County,Miami-Dade County_2014
+2014,Houston, TX, United States,86.5,51.0,69.2,84.3,75.1,120.6,Harris County,Harris County_2014
+2014,Denver, CO, United States,82.1,44.1,63.6,92.1,69.1,134.0,Denver County,Denver County_2014
+2014,Buffalo, NY, United States,81.4,28.8,55.8,93.2,64.4,125.4,Erie County,Erie County_2014
+2014,Reno, NV, United States,81.2,28.4,55.5,104.7,58.5,97.5,Washoe County,Washoe County_2014
+2014,Chicago, IL, United States,81.0,55.3,68.5,84.3,74.2,117.3,Cook County,Cook County_2014
+2014,Raleigh, NC, United States,80.6,36.6,59.2,89.0,70.7,119.4,Wake County,Wake County_2014
+2014,Detroit, MI, United States,80.3,27.7,54.7,86.2,63.1,131.8,Wayne County,Wayne County_2014
+2014,Springfield, MO, United States,79.9,17.7,49.7,89.9,62.7,104.1,Greene County,Greene County_2014
+2014,New Orleans, LA, United States,79.4,41.6,61.0,87.7,68.0,113.2,Orleans Parish,Orleans Parish_2014
+2014,Oakland, CA, United States,79.2,63.9,71.8,85.7,77.0,136.6,Alameda County,Alameda County_2014
+2014,Columbus, OH, United States,78.6,30.6,55.3,89.2,68.1,112.3,Franklin County,Franklin County_2014
+2014,Spokane, WA, United States,78.5,23.2,51.6,89.2,64.4,120.9,Spokane County,Spokane County_2014
+2014,Knoxville, TN, United States,78.2,31.5,55.5,84.8,61.3,113.3,Knox County,Knox County_2014
+2014,Irvine, CA, United States,78.1,60.9,69.7,75.6,76.2,167.8,Orange County,Orange County_2014
+2014,Baltimore, MD, United States,78.0,41.6,60.3,81.3,67.3,139.1,Baltimore City,Baltimore City_2014
+2014,Dallas, TX, United States,77.6,42.9,60.7,75.8,68.2,141.2,Dallas County,Dallas County_2014
+2014,San Diego, CA, United States,77.5,52.6,65.4,79.2,73.6,141.6,San Diego County,San Diego County_2014
+2014,Orlando, FL, United States,77.2,36.8,57.6,87.0,63.8,115.3,Orange County,Orange County_2014
+2014,Las Vegas, NV, United States,76.7,26.4,52.3,76.2,72.9,149.2,Clark County,Clark County_2014
+2014,Tampa, FL, United States,76.2,33.5,55.4,79.5,70.5,139.0,Hillsborough County,Hillsborough County_2014
+2014,Pittsburgh, PA, United States,75.1,34.5,55.4,72.7,68.5,121.6,Allegheny County,Allegheny County_2014
+2014,Rochester, NY, United States,73.6,30.0,52.4,85.5,65.2,85.3,Monroe County,Monroe County_2014
+2014,Portland, OR, United States,73.5,38.4,56.5,73.3,66.7,113.3,Multnomah County,Multnomah County_2014
+2014,Indianapolis, IN, United States,73.2,27.6,51.0,74.2,70.9,146.9,Marion County,Marion County_2014
+2014,Wichita, KS, United States,73.1,20.4,47.5,78.9,62.9,109.0,Sedgwick County,Sedgwick County_2014
+2014,Kansas City, MO, United States,72.5,26.3,50.0,78.5,68.9,154.1,Jackson County,Jackson County_2014
+2014,Salt Lake City, UT, United States,72.0,29.9,51.6,71.9,62.8,139.9,Salt Lake County,Salt Lake County_2014
+2014,Phoenix, AZ, United States,71.6,29.7,51.2,73.7,64.0,143.8,Maricopa County,Maricopa County_2014
+2014,Oklahoma City, OK, United States,71.6,26.4,49.6,82.7,57.7,132.2,Oklahoma County,Oklahoma County_2014
+2014,Nashville, TN, United States,71.4,36.7,54.5,74.8,62.8,159.1,Davidson County,Davidson County_2014
+2014,San Antonio, TX, United States,71.2,34.0,53.1,72.7,65.0,132.1,Bexar County,Bexar County_2014
+2014,Birmingham, AL, United States,71.2,36.4,54.3,75.7,64.1,170.4,Jefferson County,Jefferson County_2014
+2014,Los Angeles, CA, United States,70.5,55.2,63.1,66.4,74.1,128.3,Los Angeles County,Los Angeles County_2014
+2014,Akron, OH, United States,70.4,22.7,47.2,74.8,58.9,158.1,Summit County,Summit County_2014
+2014,Des Moines, IA, United States,70.0,26.8,49.0,76.0,57.2,150.8,Polk County,Polk County_2014
+2014,Omaha, NE, United States,69.5,29.1,49.8,73.3,73.0,141.9,Douglas County,Douglas County_2014
+2014,Fort Worth, TX, United States,69.3,29.7,50.1,67.4,63.9,230.1,Tarrant County,Tarrant County_2014
+2014,Boise, ID, United States,68.3,25.0,47.3,62.5,67.7,104.5,Ada County,Ada County_2014
+2014,Milwaukee, WI, United States,67.8,29.9,49.4,69.4,67.1,126.1,Milwaukee County,Milwaukee County_2014
+2015,Honolulu, HI, United States,104.2,64.9,85.0,119.4,85.1,68.7,Honolulu County,Honolulu County_2015
+2015,New York, NY, United States,100.0,100.0,100.0,100.0,100.0,100.0,New York County,New York County_2015
+2015,Anchorage, AK, United States,99.8,40.0,70.5,110.6,90.9,146.2,Anchorage Municipality,Anchorage Municipality_2015
+2015,San Francisco, CA, United States,97.0,96.1,96.5,111.9,99.2,116.7,San Francisco County,San Francisco County_2015
+2015,Stamford, CT, United States,96.2,62.7,79.8,108.9,90.1,127.6,Fairfield County,Fairfield County_2015
+2015,Washington, DC, United States,96.0,69.9,83.2,94.0,96.3,130.9,District of Columbia,District of Columbia_2015
+2015,Seattle, WA, United States,90.7,59.1,75.3,100.7,82.1,124.5,King County,King County_2015
+2015,Cleveland, OH, United States,90.3,27.3,59.5,99.3,63.6,121.8,Cuyahoga County,Cuyahoga County_2015
+2015,Houston, TX, United States,89.9,50.7,70.7,88.1,83.3,121.3,Harris County,Harris County_2015
+2015,Knoxville, TN, United States,89.6,31.0,61.0,117.2,61.0,86.4,Knox County,Knox County_2015
+2015,Hartford, CT, United States,89.5,37.8,64.2,107.0,73.9,136.3,Hartford County,Hartford County_2015
+2015,Boston, MA, United States,89.4,70.5,80.2,94.6,83.3,118.8,Suffolk County,Suffolk County_2015
+2015,Fairfax, VA, United States,89.2,55.6,72.8,86.5,84.7,122.2,Fairfax County,Fairfax County_2015
+2015,Philadelphia, PA, United States,88.6,52.9,71.1,100.6,71.8,110.0,Philadelphia County,Philadelphia County_2015
+2015,Sacramento, CA, United States,88.2,34.7,62.1,94.9,76.1,145.3,Sacramento County,Sacramento County_2015
+2015,West Palm Beach, FL, United States,86.8,43.9,65.8,91.4,76.2,109.5,Palm Beach County,Palm Beach County_2015
+2015,Madison, WI, United States,86.1,34.2,60.8,99.5,72.4,116.7,Dane County,Dane County_2015
+2015,San Jose, CA, United States,85.9,77.6,81.8,96.5,72.1,143.2,Santa Clara County,Santa Clara County_2015
+2015,Asheville, NC, United States,84.7,36.7,61.2,106.1,65.0,98.3,Buncombe County,Buncombe County_2015
+2015,Fort Lauderdale, FL, United States,84.7,41.4,63.5,88.6,72.4,125.9,Broward County,Broward County_2015
+2015,Oakland, CA, United States,84.6,66.4,75.7,98.3,75.3,114.2,Alameda County,Alameda County_2015
+2015,Miami, FL, United States,84.2,54.5,69.7,85.2,81.4,105.6,Miami-Dade County,Miami-Dade County_2015
+2015,Richmond, VA, United States,83.5,35.4,60.0,97.0,66.4,151.6,Richmond City,Richmond City_2015
+2015,Raleigh, NC, United States,83.0,35.2,59.7,87.8,75.4,132.2,Wake County,Wake County_2015
+2015,Huntsville, AL, United States,81.3,20.9,51.8,96.4,69.4,109.9,Madison County,Madison County_2015
+2015,Minneapolis, MN, United States,80.6,38.7,60.1,90.9,73.1,122.1,Hennepin County,Hennepin County_2015
+2015,Saint Louis, MO, United States,80.3,28.3,54.9,88.0,65.3,134.9,St. Louis City,St. Louis City_2015
+2015,Baltimore, MD, United States,80.0,42.4,61.6,83.2,72.4,131.7,Baltimore City,Baltimore City_2015
+2015,Buffalo, NY, United States,80.0,25.1,53.2,92.3,73.9,118.8,Erie County,Erie County_2015
+2015,Chicago, IL, United States,79.6,54.7,67.5,83.5,74.3,127.5,Cook County,Cook County_2015
+2015,Las Vegas, NV, United States,79.5,27.9,54.3,84.5,75.0,141.1,Clark County,Clark County_2015
+2015,Jacksonville, FL, United States,79.1,29.3,54.7,79.8,72.1,126.7,Duval County,Duval County_2015
+2015,Orlando, FL, United States,78.6,33.7,56.7,89.5,63.1,131.1,Orange County,Orange County_2015
+2015,Denver, CO, United States,78.6,43.6,61.5,79.6,70.5,130.1,Denver County,Denver County_2015
+2015,Austin, TX, United States,78.3,46.6,62.8,83.2,74.1,136.4,Travis County,Travis County_2015
+2015,Reno, NV, United States,78.0,24.9,52.1,88.4,66.3,70.3,Washoe County,Washoe County_2015
+2015,Grand Rapids, MI, United States,77.8,30.8,54.9,89.2,68.2,124.3,Kent County,Kent County_2015
+2015,Fresno, CA, United States,77.4,30.8,54.6,83.3,70.6,101.0,Fresno County,Fresno County_2015
+2015,San Diego, CA, United States,77.3,57.1,67.4,83.9,72.1,129.6,San Diego County,San Diego County_2015
+2015,Dallas, TX, United States,77.1,39.6,58.8,75.7,69.8,160.4,Dallas County,Dallas County_2015
+2015,Columbus, OH, United States,76.8,31.4,54.6,81.7,62.7,123.8,Franklin County,Franklin County_2015
+2015,Dayton, OH, United States,76.4,23.3,50.4,88.1,71.1,91.9,Montgomery County,Montgomery County_2015
+2015,Kansas City, MO, United States,76.1,27.8,52.5,86.3,69.3,120.2,Jackson County,Jackson County_2015
+2015,Pittsburgh, PA, United States,75.9,35.9,56.3,79.6,68.1,121.3,Allegheny County,Allegheny County_2015
+2015,Atlanta, GA, United States,75.7,34.6,55.6,76.6,70.0,156.2,Fulton County,Fulton County_2015
+2015,Tampa, FL, United States,75.7,32.0,54.4,82.9,70.9,118.5,Hillsborough County,Hillsborough County_2015
+2015,Tucson, AZ, United States,75.6,28.4,52.6,90.5,63.9,95.6,Pima County,Pima County_2015
+2015,Colorado Springs, CO, United States,75.2,28.3,52.3,85.0,67.5,135.9,El Paso County,El Paso County_2015
+2015,Ann Arbor, MI, United States,75.1,35.4,55.7,79.3,65.3,249.6,Washtenaw County,Washtenaw County_2015
+2015,Detroit, MI, United States,75.0,30.6,53.3,78.6,64.3,127.5,Wayne County,Wayne County_2015
+2015,San Antonio, TX, United States,73.7,33.5,54.1,75.3,64.2,138.5,Bexar County,Bexar County_2015
+2015,New Orleans, LA, United States,73.6,43.8,59.0,69.7,82.5,94.4,Orleans Parish,Orleans Parish_2015
+2015,Louisville, KY, United States,73.4,27.6,51.0,83.2,64.2,93.4,Jefferson County,Jefferson County_2015
+2015,Phoenix, AZ, United States,72.3,30.3,51.8,75.4,69.8,124.9,Maricopa County,Maricopa County_2015
+2015,Indianapolis, IN, United States,71.8,28.3,50.6,74.0,65.7,113.3,Marion County,Marion County_2015
+2015,Memphis, TN, United States,71.7,31.7,52.1,85.0,57.6,100.4,Shelby County,Shelby County_2015
+2015,Milwaukee, WI, United States,71.6,29.9,51.2,72.3,74.0,115.4,Milwaukee County,Milwaukee County_2015
+2015,Portland, OR, United States,71.1,43.7,57.7,68.4,68.0,111.0,Multnomah County,Multnomah County_2015
+2015,Albuquerque, NM, United States,71.1,26.0,49.1,86.4,63.7,133.9,Bernalillo County,Bernalillo County_2015
+2015,Oklahoma City, OK, United States,69.7,22.6,46.7,76.1,64.4,108.8,Oklahoma County,Oklahoma County_2015
+2015,Salt Lake City, UT, United States,69.7,31.1,50.8,67.7,65.2,137.6,Salt Lake County,Salt Lake County_2015
+2015,Los Angeles, CA, United States,69.4,57.7,63.7,65.3,73.7,136.9,Los Angeles County,Los Angeles County_2015
+2015,Boise, ID, United States,68.9,24.5,47.2,55.6,75.4,126.3,Ada County,Ada County_2015
+2015,Omaha, NE, United States,63.4,23.8,44.0,64.5,60.8,123.8,Douglas County,Douglas County_2015
