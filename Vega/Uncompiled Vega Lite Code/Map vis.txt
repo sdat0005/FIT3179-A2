@@ -1,0 +1,170 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Index of Counties in USA (2010-2015)",
+    "fontSize": 30,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "dy": -10
+  },
+  "width": 900,
+  "height": 550,
+  "padding": 20,
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Map/ne_10m_admin_2_counties.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_admin_2_counties"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e6e6e6",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      },
+      "projection": {
+        "type": "albersUsa"
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Map/ne_10m_admin_2_counties.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_admin_2_counties"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum['properties.NAME'] + ' County' + '_' + year_selection",
+          "as": "CountyYearKey"
+        },
+        {
+          "lookup": "CountyYearKey",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Data/IndexByCityAndYear_WithCounty_Updated.csv"
+            },
+            "key": "County_Year_Key",
+            "fields": [
+              "Cost of Living Index",
+              "Cost of Living Plus Rent Index",
+              "Rent Index",
+              "Groceries Index",
+              "Restaurant Price Index",
+              "Year"
+            ]
+          }
+        },
+        {
+          "lookup": "CountyYearKey",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Data/filtered_output_averaged.csv"
+            },
+            "key": "County_Year_Key",
+            "fields": ["Unemployment Rate"]
+          }
+        },
+        {
+          "calculate": "property_selection == 'Unemployment Rate' ? datum['Unemployment Rate'] : datum[property_selection]",
+          "as": "Selected_Property"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth": 0.6,
+        "opacity": 0.8
+      },
+      "encoding": {
+        "color": {
+          "field": "Selected_Property",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              "#fde0c5", "#fbb289", "#f2814b",
+              "#d65b2a", "#a3361e", "#5e1c0c"
+            ]
+          },
+          "legend": {
+            "title": {"signal": "property_selection"},
+            "labelFontSize": 14,
+            "titleFontSize": 18,
+            "titleFontWeight": "bold",
+            "orient": "right"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.NAME",
+            "type": "nominal",
+            "title": "County",
+            "format": {"signal": "{'fontWeight': 'bold'}"}
+          },
+          {
+            "field": "Selected_Property",
+            "type": "quantitative",
+            "title": {"signal": "property_selection"},
+            "format": ".2f"
+          },
+          {"field": "Year", "type": "ordinal"}
+        ]
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "property_selection",
+      "value": "Cost of Living Index",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Cost of Living Index",
+          "Cost of Living Plus Rent Index",
+          "Rent Index",
+          "Groceries Index",
+          "Restaurant Price Index",
+          "Unemployment Rate"
+        ],
+        "labels": [
+          "Cost of Living",
+          "Cost of Living + Rent",
+          "Rent",
+          "Groceries",
+          "Restaurant Price",
+          "Unemployment Rate"
+        ],
+        "name": "Select Property: ",
+        "nameFontSize": 18,
+        "labelFontSize": 16
+      }
+    },
+    {
+      "name": "year_selection",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2015,
+        "step": 1,
+        "name": "Select Year: ",
+        "nameFontSize": 18,
+        "labelFontSize": 16
+      }
+    }
+  ],
+  "config": {
+    "range": {
+      "category": {"scheme": "blues"}
+    },
+    "axis": {
+      "labelFontSize": 14,
+      "titleFontSize": 18,
+      "titleFontWeight": "bold"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Monthly Rent of Top 10 Counties With Highest Population Ranking (2010-2015)",
+    "fontSize": 30,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "offset": 20
+  },
+
+
+  "width": 900,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Data/unpivoted_price.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "filter": "datum['Population Rank'] >= 1 && datum['Population Rank'] <= 10"
+    },
+    {
+      "calculate": "datum.Month === 'January' ? 1 : datum.Month === 'February' ? 2 : datum.Month === 'March' ? 3 : datum.Month === 'April' ? 4 : datum.Month === 'May' ? 5 : datum.Month === 'June' ? 6 : datum.Month === 'July' ? 7 : datum.Month === 'August' ? 8 : datum.Month === 'September' ? 9 : datum.Month === 'October' ? 10 : datum.Month === 'November' ? 11 : datum.Month === 'December' ? 12 : null",
+      "as": "MonthNumber"
+    },
+    {
+      "calculate": "datetime(datum.Year, datum.MonthNumber, 1)",
+      "as": "Date"
+    },
+    {
+      "filter": "datum['Monthly Rent'] != null && datum['Monthly Rent'] != ''"
+    },
+    {
+      "calculate": "datum.County + ' County'",
+      "as": "CountyLabel"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 1
+      },
+      "params": [
+        {
+          "name": "highlight",
+          "select": {"type": "point", "fields": ["CountyLabel"], "empty": "all"},
+          "bind": "legend"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal",
+          "title": "Month",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 18,
+            "grid": false,
+            "labelAngle": -45,
+            "format": "%b %Y",
+            "labelOverlap": false,
+            "tickCount": "quarter",
+            "titlePadding": 20
+          }
+        },
+        "y": {
+          "field": "Monthly Rent",
+          "type": "quantitative",
+          "title": "Monthly Rent (in USD)",
+          "axis": {
+            "labelFontSize": 16, 
+            "titleFontSize": 18, 
+            "grid": false, 
+            "titlePadding": 20
+          },
+          "scale": {"domain": [800, 2600]}
+        },
+        "color": {
+          "field": "CountyLabel",
+          "type": "nominal",
+          "legend": {
+            "title": "County",
+            "labelFontSize": 14,
+            "titleFontSize": 18,
+            "titleFontWeight": "bold",
+            "symbolSize": 100,   
+            "symbolStrokeWidth": 5,
+            "offset": 30
+          }
+        },
+        "opacity": {
+          "condition": {"param": "highlight", "value": 1},
+          "value": 0.05
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "size": 200,
+        "filled": true,
+        "opacity": 0
+      },
+      "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "Monthly Rent", "type": "quantitative"},
+        "color": {"field": "CountyLabel", "type": "nominal"},
+        "tooltip": [
+          {"field": "County", "type": "nominal", "title": "County"},
+          {"field": "Date", "type": "temporal", "title": "Date", "format": "%b %Y"},
+          {"field": "Monthly Rent", "type": "quantitative", "title": "Monthly Rent (USD)", "format": "$,d"}
+        ]
+      }
+    }
+  ]
+}

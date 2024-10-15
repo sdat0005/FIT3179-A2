@@ -3,7 +3,7 @@
   "background": "white",
   "padding": 5,
   "width": 500,
-  "height": 450,
+  "height": 550,
   "title": {
     "text": ["Unemployment Rate vs Rent Index "," by County (2010-2015)"],
     "fontSize": 30,
@@ -102,20 +102,7 @@
         "Knox County",
         "San Francisco County"
       ],
-      "range": [
-        "#1f77b4",
-        "#ff7f0e",
-        "#2ca02c",
-        "#d62728",
-        "#9467bd",
-        "#8c564b",
-        "#e377c2",
-        "#7f7f7f",
-        "#bcbd22",
-        "#17becf",
-        "#aec7e8",
-        "#ffbb78"
-      ]
+      "range": ["#cc0000", "#ff6666", "#005b96", "#6699cc", "#001f3f", "#b0a99f", "#e0c38c", "#87ceeb", "#6b8e23", "#ff8c66", "#800080", "#008080"]
     },
     {
       "name": "size",

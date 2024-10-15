@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Unemployment Rate vs Rent Index by County",
+    "fontSize": 30,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "dy": -10
+  },
+  "width": 800,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Data/bubble_chart_prepared_data.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "filter": "datum['Year'] == year_selection"
+    },
+    {
+      "filter": "datum['County'] == 'Douglas County' || datum['County'] == 'Bernalillo County' || datum['County'] == 'Maricopa County' || datum['County'] == 'Washtenaw County' || datum['County'] == 'Allegheny County' || datum['County'] == 'San Diego County' || datum['County'] == 'Orange County' || datum['County'] == 'Erie County' || datum['County'] == 'Richmond City' || datum['County'] == 'Sacramento County' || datum['County'] == 'Knox County' || datum['County'] == 'San Francisco County'"
+    }
+  ],
+  "mark": {
+    "type": "circle",
+    "tooltip": true,
+    "opacity": 0.8
+  },
+  "encoding": {
+    "x": {
+      "field": "Unemployment Rate",
+      "type": "quantitative",
+      "title": "Unemployment Rate (%)",
+      "axis": {
+        "labelFontSize": 14, 
+        "titleFontSize": 18, 
+        "grid": false
+      },
+      "scale": {
+        "domain": [3, 11]
+      }
+    },
+    "y": {
+      "field": "Rent Index",
+      "type": "quantitative",
+      "title": "Rent Index",
+      "axis": {
+        "labelFontSize": 14, 
+        "titleFontSize": 18, 
+        "grid": false
+      },
+      "scale": {
+        "domain": [3, 100]
+      }
+    },
+    "color": {
+      "field": "County",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Douglas County", "Bernalillo County", "Maricopa County", "Washtenaw County", "Allegheny County", "San Diego County", "Orange County", "Erie County", "Richmond City", "Sacramento County", "Knox County", "San Francisco County"],
+        "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf", "#aec7e8", "#ffbb78"]
+      },
+      "legend": {
+        "title": "County", 
+        "labelFontSize": 14, 
+        "titleFontSize": 18,
+        "titleFontWeight": "bold",
+        "symbolSize": 300,   
+        "symbolStrokeWidth": 5,
+        "offset": 30,
+        "orient": "right"
+      }
+    },
+    "size": {
+      "field": "Cost of Living Index",
+      "type": "quantitative",
+      "title": "Cost of Living Index",
+      "legend": {
+        "titleFontSize": 16, 
+        "labelFontSize": 14,
+        "offset": 30 
+      },
+      "scale": {
+        "domain": [60, 100], 
+        "range": [50, 800]
+      }
+    },
+    "tooltip": [
+      {"field": "County", "type": "nominal", "title": "County"},
+      {"field": "Unemployment Rate", "type": "quantitative", "format": ".2f", "title": "Unemployment Rate (%)"},
+      {"field": "Rent Index", "type": "quantitative", "format": ".2f"},
+      {"field": "Cost of Living Index", "type": "quantitative", "format": ".2f"}
+    ]
+  },
+  "params": [
+    {
+      "name": "year_selection",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2015,
+        "step": 1,
+        "name": "Select Year: "
+      }
+    }
+  ]
+}
