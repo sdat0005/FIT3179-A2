@@ -3,7 +3,7 @@
   "background": "white",
   "padding": 5,
   "width": 800,
-  "height": 350,
+  "height": 550,
   "title": {
     "text": ["Unemployment Rate vs Rent Index "," by County (2010-2015)"],
     "fontSize": 30,
