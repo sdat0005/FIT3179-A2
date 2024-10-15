@@ -10,6 +10,7 @@
     "fontWeight": "bold",
     "anchor": "middle",
     "dy": -10,
+    "lineHeight": 40,
     "frame": "group"
   },
   "style": "cell",
