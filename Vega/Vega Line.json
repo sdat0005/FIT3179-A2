@@ -5,7 +5,7 @@
   "width": 500,
   "height": 400,
   "title": {
-    "text": ["Monthly Rent of Top 10 Counties", "With","Highest Population Rankings (2010-2015)"],
+    "text": ["Monthly Rent of Top 10 Counties", "With Highest Population Rankings (2010-2015)"],
     "fontSize": 30,
     "fontWeight": "bold",
     "anchor": "middle",
