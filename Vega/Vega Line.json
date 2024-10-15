@@ -2,14 +2,15 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "background": "white",
   "padding": 5,
-  "width": 400,
+  "width": 500,
   "height": 400,
   "title": {
-    "text": "Monthly Rent of Top 10 Counties With Highest Population Rankings (2010-2015)",
+    "text": ["Monthly Rent of Top 10 Counties", "With","Highest Population Rankings (2010-2015)"],
     "fontSize": 30,
     "fontWeight": "bold",
     "anchor": "middle",
     "offset": 20,
+    "lineHeight": 40,
     "frame": "group"
   },
   "style": "cell",
