@@ -176,12 +176,12 @@
       "type": "linear",
       "domain": {"data": "data_0", "field": "Selected_Property"},
       "range": [
-        "#fde0c5",
-        "#fbb289",
-        "#f2814b",
-        "#d65b2a",
-        "#a3361e",
-        "#5e1c0c"
+        "#fde0e0",
+        "#f8a8a8",
+        "#f57070",
+        "#f04040a",
+        "#c82a2a",
+        "#9e1f1f"
       ],
       "interpolate": "hcl",
       "zero": false
