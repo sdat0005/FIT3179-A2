@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "background": "white",
   "padding": 20,
-  "width": "container",
-  "height": "container",
+  "width": 600,
+  "height": 450,
   "title": {
     "text": "Index of Counties in USA (2010-2015)",
     "fontSize": 30,
