@@ -1,0 +1,210 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 20,
+  "width": 900,
+  "height": 550,
+  "title": {
+    "text": "Index of Counties in USA (2010-2015)",
+    "fontSize": 30,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "dy": -10,
+    "frame": "group"
+  },
+  "style": "view",
+  "data": [
+    {
+      "name": "source_1",
+      "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Data/IndexByCityAndYear_WithCounty_Updated.csv",
+      "format": {"type": "csv", "delimiter": ","}
+    },
+    {
+      "name": "source_2",
+      "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Data/filtered_output_averaged.csv",
+      "format": {"type": "csv", "delimiter": ","}
+    },
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Map/ne_10m_admin_2_counties.json",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_10m_admin_2_counties",
+        "parse": {}
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum[\"properties\"] && datum[\"properties\"][\"NAME\"]",
+          "as": "properties.NAME"
+        }
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum['properties.NAME'] + ' County' + '_' + year_selection",
+          "as": "CountyYearKey"
+        },
+        {
+          "type": "lookup",
+          "from": "source_1",
+          "key": "County_Year_Key",
+          "fields": ["CountyYearKey"],
+          "values": [
+            "Cost of Living Index",
+            "Cost of Living Plus Rent Index",
+            "Rent Index",
+            "Groceries Index",
+            "Restaurant Price Index",
+            "Year"
+          ]
+        },
+        {
+          "type": "lookup",
+          "from": "source_2",
+          "key": "County_Year_Key",
+          "fields": ["CountyYearKey"],
+          "values": ["Unemployment Rate"]
+        },
+        {
+          "type": "formula",
+          "expr": "property_selection == 'Unemployment Rate' ? datum['Unemployment Rate'] : datum[property_selection]",
+          "as": "Selected_Property"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Selected_Property\"]) && isFinite(+datum[\"Selected_Property\"])"
+        }
+      ]
+    }
+  ],
+  "projections": [
+    {
+      "name": "projection",
+      "size": {"signal": "[width, height]"},
+      "fit": {"signal": "[data('source_0'), data('data_0')]"},
+      "type": "albersUsa"
+    }
+  ],
+  "signals": [
+    {
+      "name": "property_selection",
+      "value": "Cost of Living Index",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Cost of Living Index",
+          "Cost of Living Plus Rent Index",
+          "Rent Index",
+          "Groceries Index",
+          "Restaurant Price Index",
+          "Unemployment Rate"
+        ],
+        "labels": [
+          "Cost of Living",
+          "Cost of Living + Rent",
+          "Rent",
+          "Groceries",
+          "Restaurant Price",
+          "Unemployment Rate"
+        ],
+        "name": "Select Property: ",
+        "nameFontSize": 18,
+        "labelFontSize": 16
+      }
+    },
+    {
+      "name": "year_selection",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2015,
+        "step": 1,
+        "name": "Select Year: ",
+        "nameFontSize": 18,
+        "labelFontSize": 16
+      }
+    }
+  ],
+  "marks": [
+    {
+      "name": "layer_0_marks",
+      "type": "shape",
+      "style": ["geoshape"],
+      "from": {"data": "source_0"},
+      "encode": {
+        "update": {
+          "fill": {"value": "#e6e6e6"},
+          "stroke": {"value": "white"},
+          "strokeWidth": {"value": 0.5},
+          "ariaRoleDescription": {"value": "geoshape"}
+        }
+      },
+      "transform": [{"type": "geoshape", "projection": "projection"}]
+    },
+    {
+      "name": "layer_1_marks",
+      "type": "shape",
+      "style": ["geoshape"],
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0.8},
+          "stroke": {"value": "black"},
+          "strokeWidth": {"value": 0.6},
+          "fill": {"scale": "color", "field": "Selected_Property"},
+          "tooltip": {
+            "signal": "{\"County\": isValid(datum[\"properties.NAME\"]) ? datum[\"properties.NAME\"] : \"\"+datum[\"properties.NAME\"], \"Selected Property\": format(datum[\"Selected_Property\"], \".2f\"), \"Year\": year_selection}"
+          },
+          "ariaRoleDescription": {"value": "geoshape"},
+          "description": {
+            "signal": "\"Selected_Property: \" + (format(datum[\"Selected_Property\"], \"\")) + \"; County: \" + (isValid(datum[\"properties.NAME\"]) ? datum[\"properties.NAME\"] : \"\"+datum[\"properties.NAME\"]) + \"; Selected Property: \" + (format(datum[\"Selected_Property\"], \".2f\")) + \"; Year: \" + (year_selection)"
+          }
+        }
+      },
+      "transform": [{"type": "geoshape", "projection": "projection"}]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "linear",
+      "domain": {"data": "data_0", "field": "Selected_Property"},
+      "range": [
+        "#fde0c5",
+        "#fbb289",
+        "#f2814b",
+        "#d65b2a",
+        "#a3361e",
+        "#5e1c0c"
+      ],
+      "interpolate": "hcl",
+      "zero": false
+    }
+  ],
+  "legends": [
+    {
+      "labelFontSize": 14,
+      "orient": "right",
+      "title": {"signal": "property_selection"},
+      "titleFontSize": 18,
+      "titleFontWeight": "bold",
+      "fill": "color",
+      "gradientLength": {"signal": "clamp(height, 64, 200)"},
+      "encode": {"gradient": {"update": {"opacity": {"value": 0.8}}}}
+    }
+  ],
+  "config": {
+    "range": {"category": {"scheme": "blues"}},
+    "axis": {
+      "labelFontSize": 14,
+      "titleFontSize": 18,
+      "titleFontWeight": "bold"
+    }
+  }
+}

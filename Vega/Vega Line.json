@@ -1,0 +1,315 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "width": 900,
+  "height": 600,
+  "title": {
+    "text": "Monthly Rent of Top 10 Counties With Highest Population Rankings (2010-2015)",
+    "fontSize": 30,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "offset": 20,
+    "frame": "group"
+  },
+  "style": "cell",
+  "data": [
+    {"name": "highlight_store"},
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Data/unpivoted_price.csv",
+      "format": {"type": "csv", "delimiter": ","},
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum['Population Rank'] >= 1 && datum['Population Rank'] <= 10"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.Month === 'January' ? 1 : datum.Month === 'February' ? 2 : datum.Month === 'March' ? 3 : datum.Month === 'April' ? 4 : datum.Month === 'May' ? 5 : datum.Month === 'June' ? 6 : datum.Month === 'July' ? 7 : datum.Month === 'August' ? 8 : datum.Month === 'September' ? 9 : datum.Month === 'October' ? 10 : datum.Month === 'November' ? 11 : datum.Month === 'December' ? 12 : null",
+          "as": "MonthNumber"
+        },
+        {
+          "type": "formula",
+          "expr": "datetime(datum.Year, datum.MonthNumber, 1)",
+          "as": "Date"
+        },
+        {
+          "type": "filter",
+          "expr": "datum['Monthly Rent'] != null && datum['Monthly Rent'] != ''"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.County + ' County'",
+          "as": "CountyLabel"
+        }
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "(isDate(datum[\"Date\"]) || (isValid(datum[\"Date\"]) && isFinite(+datum[\"Date\"]))) && isValid(datum[\"Monthly Rent\"]) && isFinite(+datum[\"Monthly Rent\"])"
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "unit",
+      "value": {},
+      "on": [
+        {"events": "pointermove", "update": "isTuple(group()) ? group() : unit"}
+      ]
+    },
+    {
+      "name": "highlight_CountyLabel_legend",
+      "value": null,
+      "on": [
+        {
+          "events": [
+            {
+              "source": "view",
+              "type": "click",
+              "markname": "CountyLabel_legend_symbols"
+            },
+            {
+              "source": "view",
+              "type": "click",
+              "markname": "CountyLabel_legend_labels"
+            },
+            {
+              "source": "view",
+              "type": "click",
+              "markname": "CountyLabel_legend_entries"
+            }
+          ],
+          "update": "isDefined(datum.value) ? datum.value : item().items[0].items[0].datum.value",
+          "force": true
+        },
+        {
+          "events": [{"source": "view", "type": "click"}],
+          "update": "!event.item || !datum ? null : highlight_CountyLabel_legend",
+          "force": true
+        }
+      ]
+    },
+    {
+      "name": "highlight",
+      "update": "vlSelectionResolve(\"highlight_store\", \"union\", true, true)"
+    },
+    {
+      "name": "highlight_tuple",
+      "update": "highlight_CountyLabel_legend !== null ? {fields: highlight_tuple_fields, values: [highlight_CountyLabel_legend]} : null"
+    },
+    {
+      "name": "highlight_tuple_fields",
+      "value": [{"type": "E", "field": "CountyLabel"}]
+    },
+    {
+      "name": "highlight_toggle",
+      "value": false,
+      "on": [
+        {
+          "events": {"merge": [{"source": "view", "type": "click"}]},
+          "update": "event.shiftKey"
+        }
+      ]
+    },
+    {
+      "name": "highlight_modify",
+      "on": [
+        {
+          "events": {"signal": "highlight_tuple"},
+          "update": "modify(\"highlight_store\", highlight_toggle ? null : highlight_tuple, highlight_toggle ? null : true, highlight_toggle ? highlight_tuple : null)"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "layer_0_pathgroup",
+      "type": "group",
+      "from": {
+        "facet": {
+          "name": "faceted_path_layer_0_main",
+          "data": "source_0",
+          "groupby": ["CountyLabel"]
+        }
+      },
+      "encode": {
+        "update": {
+          "width": {"field": {"group": "width"}},
+          "height": {"field": {"group": "height"}}
+        }
+      },
+      "marks": [
+        {
+          "name": "layer_0_marks",
+          "type": "line",
+          "style": ["line"],
+          "sort": {"field": "x"},
+          "interactive": true,
+          "from": {"data": "faceted_path_layer_0_main"},
+          "encode": {
+            "update": {
+              "opacity": [
+                {
+                  "test": "!length(data(\"highlight_store\")) || vlSelectionTest(\"highlight_store\", datum)",
+                  "value": 1
+                },
+                {"value": 0.05}
+              ],
+              "stroke": {"scale": "color", "field": "CountyLabel"},
+              "description": {
+                "signal": "\"Month: \" + (timeFormat(datum[\"Date\"], '%b %Y')) + \"; Monthly Rent (in USD): \" + (format(datum[\"Monthly Rent\"], \"\")) + \"; CountyLabel: \" + (isValid(datum[\"CountyLabel\"]) ? datum[\"CountyLabel\"] : \"\"+datum[\"CountyLabel\"])"
+              },
+              "x": {"scale": "x", "field": "Date"},
+              "y": {"scale": "y", "field": "Monthly Rent"},
+              "defined": {
+                "signal": "isValid(datum[\"Date\"]) && isFinite(+datum[\"Date\"]) && isValid(datum[\"Monthly Rent\"]) && isFinite(+datum[\"Monthly Rent\"])"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "layer_1_marks",
+      "type": "symbol",
+      "style": ["point"],
+      "interactive": true,
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0},
+          "size": {"value": 200},
+          "fill": {"scale": "color", "field": "CountyLabel"},
+          "tooltip": {
+            "signal": "{\"County\": isValid(datum[\"County\"]) ? datum[\"County\"] : \"\"+datum[\"County\"], \"Date\": timeFormat(datum[\"Date\"], '%b %Y'), \"Monthly Rent (USD)\": format(datum[\"Monthly Rent\"], \"$,d\")}"
+          },
+          "ariaRoleDescription": {"value": "point"},
+          "description": {
+            "signal": "\"Date: \" + (timeFormat(datum[\"Date\"], '%b %d, %Y')) + \"; Monthly Rent: \" + (format(datum[\"Monthly Rent\"], \"\")) + \"; CountyLabel: \" + (isValid(datum[\"CountyLabel\"]) ? datum[\"CountyLabel\"] : \"\"+datum[\"CountyLabel\"]) + \"; County: \" + (isValid(datum[\"County\"]) ? datum[\"County\"] : \"\"+datum[\"County\"]) + \"; Monthly Rent (USD): \" + (format(datum[\"Monthly Rent\"], \"$,d\"))"
+          },
+          "x": {"scale": "x", "field": "Date"},
+          "y": {"scale": "y", "field": "Monthly Rent"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "time",
+      "domain": {
+        "fields": [
+          {"data": "source_0", "field": "Date"},
+          {"data": "data_0", "field": "Date"}
+        ]
+      },
+      "range": [0, {"signal": "width"}]
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": [800, 2600],
+      "range": [{"signal": "height"}, 0],
+      "nice": true,
+      "zero": false
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {
+        "fields": [
+          {"data": "source_0", "field": "CountyLabel"},
+          {"data": "data_0", "field": "CountyLabel"}
+        ],
+        "sort": true
+      },
+      "range": "category"
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Month",
+      "format": "%b %Y",
+      "labelAngle": 315,
+      "labelFontSize": 14,
+      "labelOverlap": false,
+      "tickCount": "quarter",
+      "titleFontSize": 18,
+      "titlePadding": 20,
+      "labelAlign": "right",
+      "labelBaseline": "top",
+      "labelFlush": true,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Monthly Rent (in USD)",
+      "labelFontSize": 16,
+      "titleFontSize": 18,
+      "titlePadding": 20,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "zindex": 0
+    }
+  ],
+  "legends": [
+    {
+      "labelFontSize": 14,
+      "offset": 30,
+      "symbolSize": 100,
+      "symbolStrokeWidth": 5,
+      "title": "County",
+      "titleFontSize": 18,
+      "titleFontWeight": "bold",
+      "stroke": "color",
+      "symbolType": "circle",
+      "encode": {
+        "labels": {
+          "name": "CountyLabel_legend_labels",
+          "interactive": true,
+          "update": {
+            "opacity": [
+              {
+                "test": "(!length(data(\"highlight_store\")) || (highlight[\"CountyLabel\"] && indexof(highlight[\"CountyLabel\"], datum.value) >= 0))",
+                "value": 1
+              },
+              {"value": 0.35}
+            ]
+          }
+        },
+        "symbols": {
+          "name": "CountyLabel_legend_symbols",
+          "interactive": true,
+          "update": {
+            "opacity": [
+              {
+                "test": "(!length(data(\"highlight_store\")) || (highlight[\"CountyLabel\"] && indexof(highlight[\"CountyLabel\"], datum.value) >= 0))",
+                "value": 1
+              },
+              {"value": 0.35}
+            ]
+          }
+        },
+        "entries": {
+          "name": "CountyLabel_legend_entries",
+          "interactive": true,
+          "update": {"fill": {"value": "transparent"}}
+        }
+      },
+      "fill": "color"
+    }
+  ],
+  "config": {}
+}
