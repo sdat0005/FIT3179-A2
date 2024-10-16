@@ -1,98 +1,152 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Unemployment Rate vs Rent Index by County",
+    "text": "Index of Counties in USA (2010-2015)",
     "fontSize": 30,
     "fontWeight": "bold",
     "anchor": "middle",
     "dy": -10
   },
-  "width": 800,
-  "height": 500,
-  "data": {
-    "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Data/bubble_chart_prepared_data.csv",
-    "format": {"type": "csv"}
-  },
-  "transform": [
+  "width": 500,
+  "height": 400,
+  "padding": 20,
+  "layer": [
     {
-      "filter": "datum['Year'] == year_selection"
+      "data": {
+        "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Map/ne_10m_admin_2_counties.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_admin_2_counties"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e6e6e6",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      },
+      "projection": {
+        "type": "albersUsa"
+      }
     },
     {
-      "filter": "datum['County'] == 'Douglas County' || datum['County'] == 'Bernalillo County' || datum['County'] == 'Maricopa County' || datum['County'] == 'Washtenaw County' || datum['County'] == 'Allegheny County' || datum['County'] == 'San Diego County' || datum['County'] == 'Orange County' || datum['County'] == 'Erie County' || datum['County'] == 'Richmond City' || datum['County'] == 'Sacramento County' || datum['County'] == 'Knox County' || datum['County'] == 'San Francisco County'"
+      "data": {
+        "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Map/ne_10m_admin_2_counties.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_admin_2_counties"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum['properties.NAME'] + ' County' + '_' + year_selection",
+          "as": "CountyYearKey"
+        },
+        {
+          "lookup": "CountyYearKey",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Data/IndexByCityAndYear_WithCounty_Updated.csv"
+            },
+            "key": "County_Year_Key",
+            "fields": [
+              "Cost of Living Index",
+              "Cost of Living Plus Rent Index",
+              "Rent Index",
+              "Groceries Index",
+              "Restaurant Price Index",
+              "Year"
+            ]
+          }
+        },
+        {
+          "lookup": "CountyYearKey",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Data/filtered_output_averaged.csv"
+            },
+            "key": "County_Year_Key",
+            "fields": ["Unemployment Rate"]
+          }
+        },
+        {
+          "calculate": "property_selection == 'Unemployment Rate' ? datum['Unemployment Rate'] : datum[property_selection]",
+          "as": "Selected_Property"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth": 0.6,
+        "opacity": 0.8
+      },
+      "encoding": {
+        "color": {
+          "field": "Selected_Property",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              "#fde0e0",
+              "#f8a8a8",
+              "#f57070",
+              "#f04040a",
+              "#c82a2a",
+              "#9e1f1f"
+            ]
+          },
+          "legend": {
+            "title": {"signal": "property_selection"},
+            "labelFontSize": 14,
+            "titleFontSize": 18,
+            "titleFontWeight": "bold",
+            "orient": "right"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.NAME",
+            "type": "nominal",
+            "title": "County",
+            "format": {"signal": "{'fontWeight': 'bold'}"}
+          },
+          {
+            "field": "Selected_Property",
+            "type": "quantitative",
+            "title": "Selected Index",
+            "format": ".2f"
+          },
+          {"field": "Year", "type": "ordinal"}
+        ]
+      }
     }
   ],
-  "mark": {
-    "type": "circle",
-    "tooltip": true,
-    "opacity": 0.8
-  },
-  "encoding": {
-    "x": {
-      "field": "Unemployment Rate",
-      "type": "quantitative",
-      "title": "Unemployment Rate (%)",
-      "axis": {
-        "labelFontSize": 14, 
-        "titleFontSize": 18, 
-        "grid": false
-      },
-      "scale": {
-        "domain": [3, 11]
-      }
-    },
-    "y": {
-      "field": "Rent Index",
-      "type": "quantitative",
-      "title": "Rent Index",
-      "axis": {
-        "labelFontSize": 14, 
-        "titleFontSize": 18, 
-        "grid": false
-      },
-      "scale": {
-        "domain": [3, 100]
-      }
-    },
-    "color": {
-      "field": "County",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Douglas County", "Bernalillo County", "Maricopa County", "Washtenaw County", "Allegheny County", "San Diego County", "Orange County", "Erie County", "Richmond City", "Sacramento County", "Knox County", "San Francisco County"],
-        "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf", "#aec7e8", "#ffbb78"]
-      },
-      "legend": {
-        "title": "County", 
-        "labelFontSize": 14, 
-        "titleFontSize": 18,
-        "titleFontWeight": "bold",
-        "symbolSize": 300,   
-        "symbolStrokeWidth": 5,
-        "offset": 30,
-        "orient": "right"
-      }
-    },
-    "size": {
-      "field": "Cost of Living Index",
-      "type": "quantitative",
-      "title": "Cost of Living Index",
-      "legend": {
-        "titleFontSize": 16, 
-        "labelFontSize": 14,
-        "offset": 30 
-      },
-      "scale": {
-        "domain": [60, 100], 
-        "range": [50, 800]
-      }
-    },
-    "tooltip": [
-      {"field": "County", "type": "nominal", "title": "County"},
-      {"field": "Unemployment Rate", "type": "quantitative", "format": ".2f", "title": "Unemployment Rate (%)"},
-      {"field": "Rent Index", "type": "quantitative", "format": ".2f"},
-      {"field": "Cost of Living Index", "type": "quantitative", "format": ".2f"}
-    ]
-  },
   "params": [
+    {
+      "name": "property_selection",
+      "value": "Unemployment Rate",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Cost of Living Index",
+          "Cost of Living Plus Rent Index",
+          "Rent Index",
+          "Groceries Index",
+          "Restaurant Price Index",
+          "Unemployment Rate"
+        ],
+        "labels": [
+          "Cost of Living",
+          "Cost of Living + Rent",
+          "Rent",
+          "Groceries",
+          "Restaurant Price",
+          "Unemployment Rate"
+        ],
+        "name": "Select Index: ",
+        "nameFontSize": 18,
+        "labelFontSize": 16
+      }
+    },
     {
       "name": "year_selection",
       "value": 2015,
@@ -101,8 +155,20 @@
         "min": 2010,
         "max": 2015,
         "step": 1,
-        "name": "Select Year: "
+        "name": "Select Year: ",
+        "nameFontSize": 18,
+        "labelFontSize": 16
       }
     }
-  ]
+  ],
+  "config": {
+    "range": {
+      "category": {"scheme": "blues"}
+    },
+    "axis": {
+      "labelFontSize": 14,
+      "titleFontSize": 18,
+      "titleFontWeight": "bold"
+    }
+  }
 }
