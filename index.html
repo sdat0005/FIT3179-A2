@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Should You Be Living in USA?</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<header>
+  <h1>Should You Be Living in USA?</h1>
+  <p>Explore the quality of life across various counties in the USA from 2010 to 2015.</p>
+</header>
+
+<div class="container">
+  <!-- Row 1 -->
+  <div class="row">
+    <div class="chart-container" id="map-vis"></div>
+    <div class="text-container">
+      <h2>Is the cost of living in your county of choice bearable?</h2>
+      <p>Living in the USA varies drastically depending on the county. Some counties are affordable, while others are known for their high costs. Hover over the map to see where your county stands and discover which areas might stretch your budget. You can explore how the cost of living varies across different counties, from the more affordable regions to the expensive ones like San Francisco or New York. Adjust the year slider to see how things have changed over time. Maybe you'll find that some places have become more affordable, while others are now more challenging to live in due to rising costs.</p>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="row">
+    <div class="chart-container" id="bubble-vis"></div>
+    <div class="text-container">
+      <h2>Worried about job prospects and rent increases?</h2>
+      <p>Planning to move somewhere with stable job prospects and cost-effective living? From 2010 to 2015, some counties with high rents also showed significant unemployment rates. If you’re eyeing a region with low unemployment and reasonable rent, you might want to skip places like coastal counties where the cost of living is high but opportunities may not match up. Instead, look for areas with a balanced job market, affordable housing, and sustainable growth for a better quality of life. In some counties, like Knox or Allegheny, you might find a sweet spot—rents remain reasonable, and unemployment rates are low. On the other hand, places like Richmond City might present challenges with both higher costs and job insecurity. By adjusting the year slider, you can watch how these areas change over time, revealing potential trends that could help you decide where to settle down.</p>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="row">
+    <div class="chart-container" id="line-vis"></div>
+    <div class="text-container">
+      <h2>Thinking About Rent?</h2>
+      <p>Wondering if rent in a bustling county is going to break the bank? From 2010 to 2015, rent prices in top counties climbed steadily, hinting at growing demand and limited affordability. Counties like San Francisco and Los Angeles, for instance, saw noticeable increases, making them less ideal for those seeking stable rent. However, if you’re considering long-term affordability, some counties show gentler increases. This line chart helps you predict where rent might hit hardest, guiding you towards counties that may offer more financial breathing room. You can click on a specific county in the legend to isolate and view its trend line, making it easier to compare rent trends individually.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© Made By Sayan Datta (31955436)</p>
+</footer>
+
+<script>
+  // Embed visualizations
+  vegaEmbed("#map-vis", "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Vega/Vega%20Map.json");
+  vegaEmbed("#bubble-vis", "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Vega/Vega%20Bubble.json");
+  vegaEmbed("#line-vis", "https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Vega/Vega%20Line.json");
+</script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

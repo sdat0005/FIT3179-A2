@@ -1,0 +1,94 @@
+/* Main body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative; 
+  color: #333;
+}
+
+body::before {
+  content: "";
+  background-image: url('https://raw.githubusercontent.com/sdat0005/FIT3179-A2/refs/heads/main/Background.webp'); 
+  background-size: cover; 
+  background-position: center; 
+  opacity: 0.2; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* Header styling */
+header {
+  background-color: #3b5998; /* American flag blue */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Container for content */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Rows and columns for charts and text */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.chart-container {
+  flex: 2;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.text-container {
+  flex: 1;
+  padding: 20px;
+  margin-left: 20px;
+  background-color: #f1f7fd; /* Light background for text containers */
+  border-left: 4px solid #3b5998; /* Blue accent border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-container h2 {
+  margin-top: 0;
+  color: #3b5998; /* American flag blue for headings */
+  font-size: 1.8em;
+}
+
+.text-container p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Footer styling */
+footer {
+  background-color: #3b5998; /* Matching blue for footer */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
