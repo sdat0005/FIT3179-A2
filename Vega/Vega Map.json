@@ -10,7 +10,8 @@
     "fontWeight": "bold",
     "anchor": "middle",
     "dy": -10,
-    "frame": "group"
+    "frame": "group",
+    "color": "#3b5998"
   },
   "style": "view",
   "data": [
@@ -194,6 +195,7 @@
       "title": {"signal": "property_selection"},
       "titleFontSize": 18,
       "titleFontWeight": "bold",
+      "titleColor": "#3b5998",
       "fill": "color",
       "gradientLength": {"signal": "clamp(height, 64, 200)"},
       "encode": {"gradient": {"update": {"opacity": {"value": 0.8}}}}
